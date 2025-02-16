@@ -1,0 +1,12 @@
+def is_isogram?(phrase)
+  cleaned_phrase = phrase.downcase.delete(" -") 
+
+  puts cleaned_phrase
+  cleaned_phrase.chars.uniq.length == cleaned_phrase.length
+end
+
+
+puts is_isogram?("background")    # vrai
+puts is_isogram?("isogram")       # vrai
+puts is_isogram?("hello")         # faut
+puts is_isogram?("six-year-old")  # vrai
